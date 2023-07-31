@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  // width: 100%;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.63;
+  padding: 0 2rem;
+  font-size: 1.075rem;
+}

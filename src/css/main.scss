@@ -1,0 +1,73 @@
+@use "./variables" as *;
+@use "./settings";
+@use "./mixins" as *;
+@use "./header";
+@use "./footer.scss";
+@use "./mediaQuerries";
+
+/*  Fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+body,
+html {
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  color: $text;
+}
+
+main {
+  @include flex(column);
+  color: $body-copy;
+  text-align: center;
+  gap: 2rem;
+
+  img {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  h2 {
+    color: $headings;
+    margin-top: 5rem;
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    @extend h2;
+    margin: 2.6rem 2rem 0.8rem 2rem;
+  }
+
+  .phones-article {
+    position: relative;
+    background-image: url(../assets/bg-pattern-circles.svg),
+      linear-gradient($Very-dark-gray-blue, $Very-dark-desaturated-blue);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0 6rem 0 6rem;
+    padding: 10rem 0 8rem 0;
+    margin-top: 13rem;
+
+    img {
+      position: absolute;
+      top: -12rem;
+    }
+
+    h3 {
+      @extend h2;
+      color: $text;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      color: $text;
+    }
+  }
+  .laptop-article {
+    img {
+      width: 100%;
+    }
+  }
+}

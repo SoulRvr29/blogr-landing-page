@@ -1,0 +1,65 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+header {
+  z-index: 0;
+  position: relative;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background-image: url(../assets/bg-pattern-intro-mobile.svg),
+    linear-gradient(135deg, $Very-light-red, $Light-red);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0 0 0 6rem;
+
+  nav {
+    img:first-child {
+      width: 5rem;
+    }
+    border: $Light-red;
+    @include flex(row, space-between);
+  }
+
+  section {
+    margin: 7rem 0;
+
+    h1 {
+      font-size: 2rem;
+      margin: 1rem;
+    }
+
+    .header-btn {
+      @include flex;
+      gap: 1rem;
+      margin: 3rem 0;
+      button {
+        padding: 0.7rem 1.1rem;
+        padding-top: 0.9rem;
+        border-radius: 2rem;
+        border: 1px solid $text;
+        font-size: 1.1rem;
+        font-family: "Overpass", sans-serif;
+        font-weight: 600;
+        background: $text;
+        mix-blend-mode: screen;
+
+        &:last-of-type {
+          background: unset;
+          color: $text;
+          &:hover {
+            background-color: $text;
+            color: $CTA-text;
+          }
+        }
+
+        &:hover {
+          background-color: $CTA-text;
+          cursor: pointer;
+          color: $text;
+          border-color: $CTA-text;
+        }
+      }
+    }
+  }
+}
