@@ -1,2 +1,2 @@
-# blogr-landing-page
+# blogr landing page
 ## Site building in progress...
