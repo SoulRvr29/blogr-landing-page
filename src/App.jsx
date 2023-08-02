@@ -1,6 +1,8 @@
-import editorImg from "./assets/illustration-editor-mobile.svg";
+import editorImgMobile from "./assets/illustration-editor-mobile.svg";
+import editorImgDesktop from "./assets/illustration-editor-desktop.svg";
 import phonesImg from "./assets/illustration-phones.svg";
 import laptopImg from "./assets/illustration-laptop-mobile.svg";
+import circlesBkg from "./assets/bg-pattern-circles.svg";
 
 function App() {
   return (
@@ -8,7 +10,8 @@ function App() {
       <h2>Designed for the future</h2>
       <article className="editor-article">
         <section>
-          <img src={editorImg}></img>
+          <img src={editorImgMobile}></img>
+          <img src={editorImgDesktop}></img>
         </section>
         <section>
           <h3>Introducing an extensible editor</h3>
@@ -31,7 +34,7 @@ function App() {
       </article>
       <article className="phones-article">
         <section>
-          <img src={phonesImg}></img>
+          <img className="phonesImg" src={phonesImg}></img>
         </section>
         <section>
           <h3>State of the Art Infrastructure</h3>
@@ -42,6 +45,13 @@ function App() {
             site competitive.
           </p>
         </section>
+        <div className="phones-article-bkg">
+          <img
+            className="circles-bkg"
+            src={circlesBkg}
+            title="background"
+          ></img>
+        </div>
       </article>
       <article className="laptop-article">
         <section>

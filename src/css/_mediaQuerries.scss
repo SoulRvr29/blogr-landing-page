@@ -1,8 +1,14 @@
 @use "./mixins" as *;
 
-@media (min-width: 700px) {
+@media screen and (min-width: 800px) {
   header {
     padding: 4rem 10rem;
+    .bkg-mobile {
+      display: none;
+    }
+    .bkg-desktop {
+      display: block;
+    }
     nav {
       img {
         &:first-child {
@@ -24,36 +30,78 @@
   }
 
   main {
+    overflow: hidden;
+    gap: 10rem !important;
     h2 {
-      font-size: 10rem;
+      font-size: 2.5rem !important;
+      margin-bottom: 2rem;
+    }
+    h3 {
+      text-align: left;
+    }
+    p {
+      text-align: left;
     }
     .editor-article {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      section {
+        margin-left: 8rem;
+        img:first-child {
+          display: none;
+        }
+        img:last-child {
+          display: block;
+          position: relative;
+          scale: 1.6;
+          top: -4rem;
+          left: 6rem;
+        }
+      }
       section:last-child {
         grid-area: 1;
       }
     }
     .phones-article {
-      margin: 0;
+      section {
+        padding: 4rem 2rem;
+      }
+      position: relative;
+      .phonesImg,
+      img {
+        position: absolute !important;
+        width: 45%;
+        top: -9rem !important;
+      }
       display: grid;
       grid-template-columns: 1fr 1fr;
-
-      img {
-        //   position: relative !important;
-        width: 30rem;
-        top: 40rem;
-        left: 0rem;
+      .phones-article-bkg {
+        margin: 0 !important;
+        top: 0 !important;
+        min-height: 25rem !important;
       }
     }
     .laptop-article {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      section {
+        img {
+          scale: 1.4;
+          position: relative;
+          left: -10rem;
+        }
+      }
     }
   }
   footer {
     @include flex(row, space-between);
     padding: 5rem 10rem;
     text-align: left;
+    img {
+      align-self: flex-start;
+    }
+    ul {
+      align-self: flex-start;
+    }
   }
 }

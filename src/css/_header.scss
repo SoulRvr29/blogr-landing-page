@@ -6,12 +6,25 @@ header {
   position: relative;
   padding: 3rem 1.5rem;
   text-align: center;
-  background-image: url(../assets/bg-pattern-intro-mobile.svg),
-    linear-gradient(135deg, $Very-light-red, $Light-red);
-  background-size: 200%;
+  background-image: linear-gradient(135deg, $Very-light-red, $Light-red);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0 0 0 6rem;
+  overflow: hidden;
+  .bkg-mobile {
+    z-index: -1;
+    position: absolute;
+    top: -16rem;
+    left: -21rem;
+  }
+
+  .bkg-desktop {
+    display: none;
+    z-index: -1;
+    position: absolute;
+    top: -83rem;
+    left: -28rem;
+  }
 
   nav {
     img:first-child {
@@ -34,13 +47,12 @@ header {
       gap: 1rem;
       margin: 3rem 0;
       button {
-        padding: 0.7rem 1.1rem;
-        padding-top: 0.9rem;
+        padding: 0.8rem 1.1rem;
         border-radius: 2rem;
         border: 1px solid $text;
         font-size: 1.1rem;
-        font-family: "Overpass", sans-serif;
-        font-weight: 600;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
         background: $text;
         mix-blend-mode: screen;
 
