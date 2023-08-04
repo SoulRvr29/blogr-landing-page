@@ -1,7 +1,8 @@
 import editorImgMobile from "./assets/illustration-editor-mobile.svg";
 import editorImgDesktop from "./assets/illustration-editor-desktop.svg";
 import phonesImg from "./assets/illustration-phones.svg";
-import laptopImg from "./assets/illustration-laptop-mobile.svg";
+import laptopImgMobile from "./assets/illustration-laptop-mobile.svg";
+import laptopImgDesktop from "./assets/illustration-laptop-desktop.svg";
 import circlesBkg from "./assets/bg-pattern-circles.svg";
 
 function App() {
@@ -55,7 +56,8 @@ function App() {
       </article>
       <article className="laptop-article">
         <section>
-          <img src={laptopImg}></img>
+          <img src={laptopImgMobile}></img>
+          <img src={laptopImgDesktop}></img>
         </section>
         <section>
           <h3>Free, open, simple</h3>
