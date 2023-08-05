@@ -10,8 +10,9 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0 0 0 6rem;
-  overflow: hidden;
+  // overflow: hidden;
   .bkg-mobile {
+    display: none;
     z-index: -1;
     position: absolute;
     top: -16rem;
@@ -27,11 +28,13 @@ header {
   }
 
   nav {
+    @include flex(row, space-between);
+    border: $Light-red;
+    position: relative;
+
     img:first-child {
       width: 5rem;
     }
-    border: $Light-red;
-    @include flex(row, space-between);
   }
 
   section {
@@ -71,6 +74,80 @@ header {
           color: $text;
           border-color: $CTA-text;
         }
+      }
+    }
+  }
+  .list-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    margin-top: 7.5rem;
+    z-index: 5;
+    .nav-list {
+      // display: none;
+      box-shadow: 0.7rem 1.1rem 2rem rgba(0, 0, 0, 0.295);
+      width: 85%;
+      margin: 0 auto;
+      background: white;
+      border-radius: 0.3rem;
+      ul {
+        list-style-type: none;
+        color: $headings;
+        padding: 1.5rem;
+        text-align: center;
+        li {
+          &:last-child {
+            border-bottom: 1px solid rgb(232, 232, 235);
+          }
+          h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            &::after {
+              margin-left: 0.5rem;
+              content: url(../assets/icon-arrow-dark.svg);
+            }
+          }
+          ol {
+            // display: none;
+            border-radius: 0.3rem;
+            background-color: rgb(232, 232, 235);
+            list-style-type: none;
+            padding: 0.5rem;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            li {
+              text-align: center;
+              font-size: 1rem;
+              font-weight: bold;
+              color: $body-copy;
+              margin: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+    .login-section {
+      width: 100%;
+      padding-bottom: 2rem;
+      button {
+        display: block;
+        margin: 0 auto;
+        font-family: "Overpass", sans-serif;
+        font-weight: bold;
+        font-size: 1.1rem;
+        border: none;
+      }
+      .login {
+        background: none;
+        color: $headings;
+        margin-bottom: 1rem;
+      }
+      .sign-up {
+        color: $text;
+        background: linear-gradient(to right, $Very-light-red, $Light-red);
+        padding: 0.7rem 2.2rem;
+        border-radius: 4rem;
       }
     }
   }

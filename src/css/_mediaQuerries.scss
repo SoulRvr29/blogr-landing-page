@@ -8,7 +8,7 @@
       display: none;
     }
     .bkg-desktop {
-      display: block;
+      // display: block;
     }
     nav {
       img {
@@ -26,6 +26,57 @@
       }
       p {
         font-size: 1.2rem;
+      }
+    }
+
+    .list-container {
+      .nav-list {
+        max-width: clamp(1rem, 50%, 50rem);
+        display: flex;
+        justify-content: space-between;
+        background: none;
+        box-shadow: none;
+        position: relative;
+        top: -4rem;
+        // right: 3rem;
+        ul {
+          padding: 0 !important;
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          color: white;
+
+          li {
+            min-width: 110px;
+            &:last-child {
+              border: none;
+            }
+          }
+          h4 {
+            margin: 0 !important;
+          }
+
+          ol {
+            display: none;
+            li {
+            }
+          }
+        }
+      }
+    }
+    .login-section {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 !important;
+      button {
+        margin: 0 !important;
+      }
+      .login {
+        color: white !important;
+        margin-right: 2rem !important;
+      }
+      .sign-up {
       }
     }
   }

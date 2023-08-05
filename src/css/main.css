@@ -40,9 +40,9 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0 0 0 6rem;
-  overflow: hidden;
 }
 header .bkg-mobile {
+  display: none;
   z-index: -1;
   position: absolute;
   top: -16rem;
@@ -56,11 +56,12 @@ header .bkg-desktop {
   left: -28rem;
 }
 header nav {
-  border: hsl(353, 100%, 62%);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border: hsl(353, 100%, 62%);
+  position: relative;
 }
 header nav img:first-child {
   width: 5rem;
@@ -104,6 +105,76 @@ header section .header-btn button:hover {
   color: hsl(0, 0%, 100%);
   border-color: hsl(356, 100%, 66%);
 }
+header .list-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  margin-top: 7.5rem;
+  z-index: 5;
+}
+header .list-container .nav-list {
+  box-shadow: 0.7rem 1.1rem 2rem rgba(0, 0, 0, 0.295);
+  width: 85%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 0.3rem;
+}
+header .list-container .nav-list ul {
+  list-style-type: none;
+  color: hsl(208, 49%, 24%);
+  padding: 1.5rem;
+  text-align: center;
+}
+header .list-container .nav-list ul li:last-child {
+  border-bottom: 1px solid rgb(232, 232, 235);
+}
+header .list-container .nav-list ul li h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+header .list-container .nav-list ul li h4::after {
+  margin-left: 0.5rem;
+  content: url(../assets/icon-arrow-dark.svg);
+}
+header .list-container .nav-list ul li ol {
+  border-radius: 0.3rem;
+  background-color: rgb(232, 232, 235);
+  list-style-type: none;
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+header .list-container .nav-list ul li ol li {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: hsl(207, 13%, 34%);
+  margin: 1.1rem;
+}
+header .list-container .login-section {
+  width: 100%;
+  padding-bottom: 2rem;
+}
+header .list-container .login-section button {
+  display: block;
+  margin: 0 auto;
+  font-family: "Overpass", sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+}
+header .list-container .login-section .login {
+  background: none;
+  color: hsl(208, 49%, 24%);
+  margin-bottom: 1rem;
+}
+header .list-container .login-section .sign-up {
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  padding: 0.7rem 2.2rem;
+  border-radius: 4rem;
+}
 
 footer {
   margin-top: 6rem;
@@ -140,9 +211,6 @@ footer ul li {
   header .bkg-mobile {
     display: none;
   }
-  header .bkg-desktop {
-    display: block;
-  }
   header nav img:first-child {
     width: 6rem;
   }
@@ -154,6 +222,47 @@ footer ul li {
   }
   header section p {
     font-size: 1.2rem;
+  }
+  header .list-container .nav-list {
+    max-width: clamp(1rem, 50%, 50rem);
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    box-shadow: none;
+    position: relative;
+    top: -4rem;
+  }
+  header .list-container .nav-list ul {
+    padding: 0 !important;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: white;
+  }
+  header .list-container .nav-list ul li {
+    min-width: 110px;
+  }
+  header .list-container .nav-list ul li:last-child {
+    border: none;
+  }
+  header .list-container .nav-list ul h4 {
+    margin: 0 !important;
+  }
+  header .list-container .nav-list ul ol {
+    display: none;
+  }
+  header .login-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 !important;
+  }
+  header .login-section button {
+    margin: 0 !important;
+  }
+  header .login-section .login {
+    color: white !important;
+    margin-right: 2rem !important;
   }
   main {
     overflow: hidden;
@@ -271,6 +380,9 @@ main h3 {
   color: hsl(208, 49%, 24%);
   font-size: 1.7rem;
   margin: 2.6rem 2rem 0.8rem 2rem;
+}
+main .editor-article {
+  z-index: -1;
 }
 main .editor-article img:first-child {
   scale: 110%;

@@ -37,6 +37,7 @@ main {
     margin: 2.6rem 2rem 0.8rem 2rem;
   }
   .editor-article {
+    z-index: -1;
     img:first-child {
       scale: 110%;
       max-width: 30rem;
