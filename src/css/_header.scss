@@ -1,5 +1,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
+@use "./settings" as *;
 
 header {
   z-index: 0;
@@ -34,6 +35,11 @@ header {
 
     img:first-child {
       width: 5rem;
+    }
+    .list-button {
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
@@ -84,7 +90,10 @@ header {
     width: 100vw;
     margin-top: 7.5rem;
     z-index: 5;
+
     .nav-list {
+      animation: fade-in 1s forwards;
+
       // display: none;
       box-shadow: 0.7rem 1.1rem 2rem rgba(0, 0, 0, 0.295);
       width: 85%;
@@ -103,25 +112,39 @@ header {
           h4 {
             font-size: 1.2rem;
             margin-bottom: 1.5rem;
-            &::after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
               margin-left: 0.5rem;
-              content: url(../assets/icon-arrow-dark.svg);
+              margin-bottom: 3px;
+            }
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
             }
           }
           ol {
             // display: none;
+
             border-radius: 0.3rem;
             background-color: rgb(232, 232, 235);
             list-style-type: none;
             padding: 0.5rem;
             width: 100%;
             margin-bottom: 1.5rem;
+            // animation: slide-out 1s forwards;
+            // transition: all 1s;
             li {
               text-align: center;
               font-size: 1rem;
               font-weight: bold;
               color: $body-copy;
               margin: 1.1rem;
+              &:hover {
+                cursor: pointer;
+                color: $Very-dark-gray-blue;
+              }
             }
           }
         }
@@ -142,12 +165,20 @@ header {
         background: none;
         color: $headings;
         margin-bottom: 1rem;
+        &:hover {
+          cursor: pointer;
+          color: $CTA-text;
+        }
       }
       .sign-up {
         color: $text;
         background: linear-gradient(to right, $Very-light-red, $Light-red);
         padding: 0.7rem 2.2rem;
         border-radius: 4rem;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.75;
+        }
       }
     }
   }

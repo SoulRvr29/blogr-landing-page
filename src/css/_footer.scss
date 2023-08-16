@@ -22,6 +22,10 @@ footer {
     list-style-type: none;
     li {
       margin: 0.6rem 0;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
     }
   }
 }

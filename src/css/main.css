@@ -31,6 +31,34 @@ p {
   font-size: 1.075rem;
 }
 
+.hide {
+  display: none;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slide-out {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
 header {
   z-index: 0;
   position: relative;
@@ -65,6 +93,9 @@ header nav {
 }
 header nav img:first-child {
   width: 5rem;
+}
+header nav .list-button:hover {
+  cursor: pointer;
 }
 header section {
   margin: 7rem 0;
@@ -114,6 +145,7 @@ header .list-container {
   z-index: 5;
 }
 header .list-container .nav-list {
+  animation: fade-in 1s forwards;
   box-shadow: 0.7rem 1.1rem 2rem rgba(0, 0, 0, 0.295);
   width: 85%;
   margin: 0 auto;
@@ -132,10 +164,17 @@ header .list-container .nav-list ul li:last-child {
 header .list-container .nav-list ul li h4 {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-header .list-container .nav-list ul li h4::after {
+header .list-container .nav-list ul li h4 svg {
   margin-left: 0.5rem;
-  content: url(../assets/icon-arrow-dark.svg);
+  margin-bottom: 3px;
+}
+header .list-container .nav-list ul li h4:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 header .list-container .nav-list ul li ol {
   border-radius: 0.3rem;
@@ -151,6 +190,10 @@ header .list-container .nav-list ul li ol li {
   font-weight: bold;
   color: hsl(207, 13%, 34%);
   margin: 1.1rem;
+}
+header .list-container .nav-list ul li ol li:hover {
+  cursor: pointer;
+  color: hsl(237, 17%, 21%);
 }
 header .list-container .login-section {
   width: 100%;
@@ -169,11 +212,19 @@ header .list-container .login-section .login {
   color: hsl(208, 49%, 24%);
   margin-bottom: 1rem;
 }
+header .list-container .login-section .login:hover {
+  cursor: pointer;
+  color: hsl(356, 100%, 66%);
+}
 header .list-container .login-section .sign-up {
   color: hsl(0, 0%, 100%);
   background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
   padding: 0.7rem 2.2rem;
   border-radius: 4rem;
+}
+header .list-container .login-section .sign-up:hover {
+  cursor: pointer;
+  opacity: 0.75;
 }
 
 footer {
@@ -201,6 +252,10 @@ footer ul h4 {
 }
 footer ul li {
   margin: 0.6rem 0;
+}
+footer ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 800px) {
