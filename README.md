@@ -5,8 +5,8 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 ## Table of contents
 
 - [The challenge](#the-challenge)
-- [Screenshot](#screenshot)
 - [Links](#links)
+- [Screenshot](#screenshot)
 - [Built with](#built-with)
 - [Author](#author)
 
@@ -16,16 +16,16 @@ Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
+- 
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [https://soulrvr29.github.io/blogr-landing-page/](https://soulrvr29.github.io/blogr-landing-page/)
 
 ### Screenshot
 
 ![](./screenshot-desktop.jpeg)
 ![](./screenshot-mobile.jpeg)
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://soulrvr29.github.io/blogr-landing-page/](https://soulrvr29.github.io/blogr-landing-page/)
 
 ### Built with
 
