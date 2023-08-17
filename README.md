@@ -23,10 +23,10 @@ Users should be able to:
 - Live Site URL: [https://soulrvr29.github.io/blogr-landing-page/](https://soulrvr29.github.io/blogr-landing-page/)
 
 ### Screenshot
-#### Desktop
+Desktop
 ![](./screenshot-desktop.jpeg)
 
-#### Mobile
+Mobile
 ![](./screenshot-mobile.jpeg)
 
 ### Built with
