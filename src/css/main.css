@@ -90,6 +90,7 @@ header nav {
   align-items: center;
   border: hsl(353, 100%, 62%);
   position: relative;
+  width: 100%;
 }
 header nav img:first-child {
   width: 5rem;
@@ -194,10 +195,12 @@ header .list-container .nav-list ul li ol li {
 header .list-container .nav-list ul li ol li:hover {
   cursor: pointer;
   color: hsl(237, 17%, 21%);
+  text-decoration: underline;
 }
 header .list-container .login-section {
   width: 100%;
   padding-bottom: 2rem;
+  margin-right: -10rem;
 }
 header .list-container .login-section button {
   display: block;
@@ -214,7 +217,7 @@ header .list-container .login-section .login {
 }
 header .list-container .login-section .login:hover {
   cursor: pointer;
-  color: hsl(356, 100%, 66%);
+  opacity: 0.75;
 }
 header .list-container .login-section .sign-up {
   color: hsl(0, 0%, 100%);
@@ -258,9 +261,14 @@ footer ul li:hover {
   text-decoration: underline;
 }
 
+@media screen and (min-width: 1300px) {
+  header {
+    padding: 4rem 10rem !important;
+  }
+}
 @media screen and (min-width: 800px) {
   header {
-    padding: 4rem 10rem;
+    padding: 4rem 2rem !important;
     padding-bottom: min(2vw, 4rem);
   }
   header .bkg-mobile {
@@ -268,6 +276,7 @@ footer ul li:hover {
   }
   header nav img:first-child {
     width: 6rem;
+    margin-left: 6rem;
   }
   header nav img:last-child {
     display: none;
@@ -278,39 +287,49 @@ footer ul li:hover {
   header section p {
     font-size: 1.2rem;
   }
+  header .list-container {
+    width: 100%;
+  }
   header .list-container .nav-list {
-    max-width: clamp(1rem, 50%, 50rem);
+    width: 80%;
     display: flex;
     justify-content: space-between;
     background: none;
     box-shadow: none;
     position: relative;
-    top: -4rem;
+    top: -3rem;
+    align-items: flex-start;
   }
   header .list-container .nav-list ul {
     padding: 0 !important;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
     color: white;
-  }
-  header .list-container .nav-list ul li {
-    min-width: 110px;
+    margin-left: 10rem;
+    align-items: flex-start;
+    z-index: 12;
   }
   header .list-container .nav-list ul li:last-child {
     border: none;
   }
   header .list-container .nav-list ul h4 {
     margin: 0 !important;
+    font-size: 1rem !important;
+  }
+  header .list-container .nav-list ul h4 svg path {
+    stroke: hsl(0, 0%, 100%);
   }
   header .list-container .nav-list ul ol {
-    display: none;
+    background-color: white !important;
   }
   header .login-section {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 0 !important;
+    margin-right: 1rem !important;
+    margin-top: -0.7rem;
   }
   header .login-section button {
     margin: 0 !important;
@@ -318,6 +337,9 @@ footer ul li:hover {
   header .login-section .login {
     color: white !important;
     margin-right: 2rem !important;
+  }
+  header .login-section .sign-up {
+    background-color: white !important;
   }
   main {
     overflow: hidden;
@@ -440,7 +462,6 @@ main .editor-article {
   z-index: -1;
 }
 main .editor-article img:first-child {
-  scale: 110%;
   max-width: 30rem;
   margin: 0 auto;
 }
@@ -457,7 +478,6 @@ main .phones-article .circles-bkg {
   position: absolute;
   top: -7.5rem;
   left: 0;
-  scale: 1.6;
 }
 main .phones-article img {
   max-width: 30rem;
@@ -488,11 +508,10 @@ main .phones-article h3 {
 main .phones-article p {
   color: hsl(0, 0%, 100%);
 }
-main .laptop-article img:first-child {
-  scale: 1.3;
+main .laptop-article section img:first-child {
   max-width: 30rem;
   margin: 0 auto;
 }
-main .laptop-article img:last-child {
+main .laptop-article section img:last-child {
   display: none;
 }/*# sourceMappingURL=main.css.map */

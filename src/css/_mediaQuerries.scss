@@ -1,8 +1,18 @@
 @use "./mixins" as *;
+@use "./variables" as *;
+
+@media screen and (min-width: 1300px) {
+  header {
+    padding: 4rem 10rem !important;
+    .login-section {
+      // margin-right: 0rem !important;
+    }
+  }
+}
 
 @media screen and (min-width: 800px) {
   header {
-    padding: 4rem 10rem;
+    padding: 4rem 2rem !important;
     padding-bottom: min(2vw, 4rem);
     .bkg-mobile {
       display: none;
@@ -14,6 +24,7 @@
       img {
         &:first-child {
           width: 6rem;
+          margin-left: 6rem;
         }
         &:last-child {
           display: none;
@@ -30,36 +41,45 @@
     }
 
     .list-container {
+      width: 100%;
       .nav-list {
-        max-width: clamp(1rem, 50%, 50rem);
+        // max-width: clamp(1rem, 50%, 50rem);
+        width: 80%;
         display: flex;
         justify-content: space-between;
         background: none;
         box-shadow: none;
         position: relative;
-        top: -4rem;
+        top: -3rem;
+        align-items: flex-start;
         // right: 3rem;
         ul {
           padding: 0 !important;
           display: flex;
-          gap: 1rem;
+          gap: 2rem;
           align-items: center;
           color: white;
-
+          margin-left: 10rem;
+          align-items: flex-start;
+          z-index: 12;
           li {
-            min-width: 110px;
+            // min-width: 100px;
             &:last-child {
               border: none;
             }
           }
           h4 {
             margin: 0 !important;
+            font-size: 1rem !important;
+            svg {
+              path {
+                stroke: $text;
+              }
+            }
           }
 
           ol {
-            display: none;
-            li {
-            }
+            background-color: white !important;
           }
         }
       }
@@ -69,6 +89,8 @@
       align-items: center;
       justify-content: flex-end;
       padding: 0 !important;
+      margin-right: 1rem !important;
+      margin-top: -0.7rem;
       button {
         margin: 0 !important;
       }
@@ -77,6 +99,7 @@
         margin-right: 2rem !important;
       }
       .sign-up {
+        background-color: white !important;
       }
     }
   }

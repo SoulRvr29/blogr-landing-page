@@ -32,7 +32,7 @@ header {
     @include flex(row, space-between);
     border: $Light-red;
     position: relative;
-
+    width: 100%;
     img:first-child {
       width: 5rem;
     }
@@ -144,6 +144,7 @@ header {
               &:hover {
                 cursor: pointer;
                 color: $Very-dark-gray-blue;
+                text-decoration: underline;
               }
             }
           }
@@ -153,6 +154,7 @@ header {
     .login-section {
       width: 100%;
       padding-bottom: 2rem;
+      margin-right: -10rem;
       button {
         display: block;
         margin: 0 auto;
@@ -167,7 +169,7 @@ header {
         margin-bottom: 1rem;
         &:hover {
           cursor: pointer;
-          color: $CTA-text;
+          opacity: 0.75;
         }
       }
       .sign-up {
