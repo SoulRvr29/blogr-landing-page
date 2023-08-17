@@ -11,7 +11,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0 0 0 6rem;
-  // overflow: hidden;
+
   .bkg-mobile {
     display: none;
     z-index: -1;
@@ -90,11 +90,8 @@ header {
     width: 100vw;
     margin-top: 7.5rem;
     z-index: 5;
-
     .nav-list {
       animation: fade-in 1s forwards;
-
-      // display: none;
       box-shadow: 0.7rem 1.1rem 2rem rgba(0, 0, 0, 0.295);
       width: 85%;
       margin: 0 auto;
@@ -106,6 +103,7 @@ header {
         padding: 1.5rem;
         text-align: center;
         li {
+          position: relative;
           &:last-child {
             border-bottom: 1px solid rgb(232, 232, 235);
           }
@@ -125,16 +123,11 @@ header {
             }
           }
           ol {
-            // display: none;
-
             border-radius: 0.3rem;
             background-color: rgb(232, 232, 235);
             list-style-type: none;
             padding: 0.5rem;
-            width: 100%;
             margin-bottom: 1.5rem;
-            // animation: slide-out 1s forwards;
-            // transition: all 1s;
             li {
               text-align: center;
               font-size: 1rem;

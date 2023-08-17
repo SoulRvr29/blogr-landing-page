@@ -3,7 +3,6 @@ import menu from "./assets/icon-hamburger.svg";
 import close from "./assets/icon-close.svg";
 import bkgMobile from "./assets/bg-pattern-intro-mobile.svg";
 import bkgDesktop from "./assets/bg-pattern-intro-desktop.svg";
-// import arrow from "./assets/icon-arrow-dark.svg";
 import { useState } from "react";
 
 const Header = () => {

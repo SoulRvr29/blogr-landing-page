@@ -1,12 +1,10 @@
 @use "./mixins" as *;
 @use "./variables" as *;
+@use "./settings" as *;
 
 @media screen and (min-width: 1300px) {
   header {
     padding: 4rem 10rem !important;
-    .login-section {
-      // margin-right: 0rem !important;
-    }
   }
 }
 
@@ -16,9 +14,6 @@
     padding-bottom: min(2vw, 4rem);
     .bkg-mobile {
       display: none;
-    }
-    .bkg-desktop {
-      // display: block;
     }
     nav {
       img {
@@ -43,7 +38,6 @@
     .list-container {
       width: 100%;
       .nav-list {
-        // max-width: clamp(1rem, 50%, 50rem);
         width: 80%;
         display: flex;
         justify-content: space-between;
@@ -52,7 +46,6 @@
         position: relative;
         top: -3rem;
         align-items: flex-start;
-        // right: 3rem;
         ul {
           padding: 0 !important;
           display: flex;
@@ -63,7 +56,6 @@
           align-items: flex-start;
           z-index: 12;
           li {
-            // min-width: 100px;
             &:last-child {
               border: none;
             }
@@ -80,6 +72,13 @@
 
           ol {
             background-color: white !important;
+            position: absolute;
+            width: fit-content;
+            margin-top: 1rem;
+            animation: fade-in 1s forwards;
+            li {
+              text-align: left !important;
+            }
           }
         }
       }
@@ -169,7 +168,7 @@
           display: none;
         }
         img:last-child {
-          display: block;
+          display: block !important;
           scale: 1.4;
           position: relative;
           left: -10rem;

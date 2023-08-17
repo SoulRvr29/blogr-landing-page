@@ -43,22 +43,6 @@ p {
     opacity: 1;
   }
 }
-@keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes slide-out {
-  from {
-    height: 0%;
-  }
-  to {
-    height: 100%;
-  }
-}
 header {
   z-index: 0;
   position: relative;
@@ -159,6 +143,9 @@ header .list-container .nav-list ul {
   padding: 1.5rem;
   text-align: center;
 }
+header .list-container .nav-list ul li {
+  position: relative;
+}
 header .list-container .nav-list ul li:last-child {
   border-bottom: 1px solid rgb(232, 232, 235);
 }
@@ -182,7 +169,6 @@ header .list-container .nav-list ul li ol {
   background-color: rgb(232, 232, 235);
   list-style-type: none;
   padding: 0.5rem;
-  width: 100%;
   margin-bottom: 1.5rem;
 }
 header .list-container .nav-list ul li ol li {
@@ -261,6 +247,27 @@ footer ul li:hover {
   text-decoration: underline;
 }
 
+.my-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem;
+  background: hsl(240, 10%, 16%);
+  z-index: 30;
+}
+.my-footer a {
+  text-decoration: none;
+  color: hsl(356, 100%, 66%);
+  margin-left: 5px;
+}
+.my-footer a:hover {
+  color: hsl(355, 100%, 74%);
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 1300px) {
   header {
     padding: 4rem 10rem !important;
@@ -322,6 +329,14 @@ footer ul li:hover {
   }
   header .list-container .nav-list ul ol {
     background-color: white !important;
+    position: absolute;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 1rem;
+    animation: fade-in 1s forwards;
+  }
+  header .list-container .nav-list ul ol li {
+    text-align: left !important;
   }
   header .login-section {
     display: flex;
@@ -407,7 +422,7 @@ footer ul li:hover {
     display: none;
   }
   main .laptop-article section img:last-child {
-    display: block;
+    display: block !important;
     scale: 1.4;
     position: relative;
     left: -10rem;
